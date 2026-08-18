@@ -2,14 +2,14 @@ pipeline {
     agent any
 
     environment {
-        IMAGE_NAME = "manojkrishnappa/recommendationservice:${GIT_COMMIT}"
+        IMAGE_NAME = "rohitkube/recommendationservice:${GIT_COMMIT}"
     }
 
     stages {
 
         stage('Git Checkout') {
             steps {
-                git url: 'https://github.com/ITkannadigaru/recommendationservice.git', branch: 'main'
+                git url: 'https://github.com/DevopsLearn73/recommendationservice.git', branch: 'main'
             }
         }
 
